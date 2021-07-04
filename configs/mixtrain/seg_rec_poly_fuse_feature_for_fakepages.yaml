@@ -63,10 +63,10 @@ SEQUENCE:
   TEACHER_FORCE_RATIO: 1.0
 DATASETS:
   # TRAIN: ("synthtext_train","icdar_2013_train","icdar_2015_train","scut-eng-char_train","total_text_train")
-  TRAIN: ("book_pages_fz2_aug_jingbu_2w", "book_pages_fz2_mix_segment_1w", "book_pages_fz2_split_ciqushi_1k", "book_pages_fz2_split_num_end_ciqushi_5k", "book_pages_ICDAR2019")
+  TRAIN: ("book_pages_fz2_aug_jingbu_2w_train", "book_pages_fz2_mix_segment_1w_train", "book_pages_fz2_split_ciqushi_1k_train", "book_pages_fz2_split_num_end_ciqushi_5k_train", "book_pages_ICDAR2019_train")
   # RATIOS: [0.25,0.25,0.25,0.125,0.125]
   RATIOS: [0.3,0.2,0.1,0.2,0.2]
-  TEST: ("book_pages_fz2_aug_jingbu_2w", "book_pages_fz2_mix_segment_1w", "book_pages_fz2_split_ciqushi_1k", "book_pages_fz2_split_num_end_ciqushi_5k", "book_pages_ICDAR2019")
+  TEST: ("book_pages_fz2_aug_jingbu_2w_test", "book_pages_fz2_mix_segment_1w_test", "book_pages_fz2_split_ciqushi_1k_test", "book_pages_fz2_split_num_end_ciqushi_5k_test", "book_pages_ICDAR2019_test")
   # TEST: ("icdar_2015_test",)
   # TEST: ("total_text_test",)
   # TEST: ("rotated_ic13_test_45",)

@@ -57,6 +57,46 @@ class DatasetCatalog(object):
             "scut-eng-char/train_images",
             "scut-eng-char/train_gts",
         ),
+        "book_pages_fz2_aug_jingbu_2w_train": (
+            "book_pages_fz2_aug_jingbu_2w/train_images",
+            "book_pages_fz2_aug_jingbu_2w/train_gts"
+        ),
+        "book_pages_fz2_aug_jingbu_2w_test": (
+            "book_pages_fz2_aug_jingbu_2w/test_images",
+            "book_pages_fz2_aug_jingbu_2w/test_gts"
+        ),
+        "book_pages_fz2_mix_segment_1w_train": (
+            "book_pages_fz2_mix_segment_1w/train_images",
+            "book_pages_fz2_mix_segment_1w/train_gts"
+        ),
+        "book_pages_fz2_mix_segment_1w_test": (
+            "book_pages_fz2_mix_segment_1w/test_images",
+            "book_pages_fz2_mix_segment_1w/test_gts"
+        ),
+        "book_pages_fz2_split_ciqushi_1k_train": (
+            "book_pages_fz2_split_ciqushi_1k/train_images",
+            "book_pages_fz2_split_ciqushi_1k/train_gts"
+        ),
+        "book_pages_fz2_split_ciqushi_1k_test": (
+            "book_pages_fz2_split_ciqushi_1k/test_images",
+            "book_pages_fz2_split_ciqushi_1k/test_gts"
+        ),
+        "book_pages_fz2_split_num_end_ciqushi_5k_train": (
+            "book_pages_fz2_split_num_end_ciqushi_5k/train_images",
+            "book_pages_fz2_split_num_end_ciqushi_5k/train_gts"
+        ),
+        "book_pages_fz2_split_num_end_ciqushi_5k_test": (
+            "book_pages_fz2_split_num_end_ciqushi_5k/test_images",
+            "book_pages_fz2_split_num_end_ciqushi_5k/test_gts"
+        ),
+        "book_pages_ICDAR2019_train": (
+            "book_pages_ICDAR2019/train_images",
+            "book_pages_ICDAR2019/train_gts"
+        ),
+        "book_pages_ICDAR2019_test": (
+            "book_pages_ICDAR2019/test_images",
+            "book_pages_ICDAR2019/test_gts"
+        ),
     }
 
     @staticmethod
@@ -117,7 +157,7 @@ class DatasetCatalog(object):
                 # gts_dir='/tmp/synth_gt/SynthText_GT_E2E/',
             )
             return dict(args=args, factory="SynthtextDataset")
-        elif "total_text" in name:
+        elif "total_text" in name or "book_pages" in name:
             data_dir = DatasetCatalog.DATA_DIR
             # data_dir = '/tmp/total_text/'
             attrs = DatasetCatalog.DATASETS[name]

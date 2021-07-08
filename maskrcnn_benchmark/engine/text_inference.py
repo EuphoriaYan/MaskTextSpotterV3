@@ -394,7 +394,7 @@ def prepare_results_for_evaluation(
             else:
                 global_prediction = prediction[0]
             test_image_width, test_image_height = global_prediction.size
-            img = Image.open(image_path)
+            img = Image.open(image_path).convert('RGB')
             width, height = img.size
             resize_ratio = float(height) / test_image_height
             global_prediction = global_prediction.resize((width, height))
